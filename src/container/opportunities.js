@@ -4,24 +4,13 @@ import axios from 'axios';
 import '../assets/css/opportunities.css';
 
 const  Opportunities = () => {
-  const [opportunities, setOpportunities] = useState('');
-
-  let content = null;
+  const [opportunities, setOpportunities] = useState(1);
 
   useEffect(async () => {
-    const result = await axios.get(`https://torre.co/api/suite/opportunities/${id}`);
+    const result = await axios.get(`https://torre.co/api/suite/opportunities/${opportunities}`);
     console.log(result);
     setOpportunities(result.data);
   }, [username]);
-
-  const handleChange = (e) => {
-    setUserName(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(`submitted ${username}`);
-  };
 
   return (
     <>
