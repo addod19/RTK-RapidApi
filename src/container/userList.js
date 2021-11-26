@@ -3,23 +3,23 @@ import axios from 'axios';
 
 import '../assets/css/userList.css';
 
-const fetchUser = async (username) => {
-  const apiConfig = {
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-      'Access-Control-Allow-Origin': '*',
-    },
-  };
-  // https://torre.co/api/suite/opportunities/$id
-  // https://torre.bio/api/bios/${username}
-  try {
-    const result = await axios.get(`https://torre.bio/api/bios/${username}`, apiConfig.headers);
-    console.log(result.data);
-  } catch (e) {
-    console.log(e);
-  }
-};
+// const fetchUser = async (username) => {
+//   const apiConfig = {
+//     headers: {
+//       'Content-Type': 'application/json',
+//       Accept: 'application/json',
+//       'Access-Control-Allow-Origin': '*',
+//     },
+//   };
+//   // https://torre.co/api/suite/opportunities/$id
+//   // https://torre.bio/api/bios/${username}
+//   try {
+//     const result = await axios.get(`https://torre.bio/api/bios/${username}`, apiConfig.headers);
+//     console.log(result.data);
+//   } catch (e) {
+//     console.log(e);
+//   }
+// };
 
 const UserList = () => {
   const [users, setUsers] = useState('');
@@ -43,7 +43,7 @@ const UserList = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(`submitted ${username}`);
-    fetchUser();
+    // fetchUser();
   };
 
   if (users) {
@@ -55,12 +55,21 @@ const UserList = () => {
           <p>{users.person.name}</p>
         </div>
 
-        <div className="skills-interset">
+        <div className="skills-interest">
+          <h2>Skills and Interest</h2>
           <div className="master-influencer">
+            <h3>
+              <i className="icon" />
+              Master Influencer
+            </h3>
             <p>{users.strengths[27].name}</p>
             <p>{users.strengths[28].name}</p>
           </div>
           <div className="proficient">
+            <h3>
+              <i className="" />
+              Proficient
+            </h3>
             <p>{users.strengths[26].name}</p>
             <p>{users.strengths[17].name}</p>
             <p>{users.strengths[0].name}</p>

@@ -1,7 +1,7 @@
 .main-wrapper {
   width: 400px;
   height: 400px;
-  border: 1px solid black;
+  color: #fff;
 
   position: relative;
   margin-left: 25%;
@@ -9,5 +9,10 @@
 
 .user-profile {
   position: relative;
-  margin-left: 30%;
+  margin-left: 50%;
+}
+
+.skills-interest {
+  position: relative;
+  margin-left: 10%;
 }
