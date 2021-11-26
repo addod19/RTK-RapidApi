@@ -53,5 +53,5 @@
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.21.0"
   },
-  "proxy": "http://localhost:3000/"
+  "proxy": "https://torre.bio/api/bios/"
 }
