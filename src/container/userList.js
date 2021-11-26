@@ -5,6 +5,8 @@ const fetchUser = async (username) => {
   const apiConfig = {
     headers: {
       'Content-Type': 'application/json',
+      'Access-Control-Allow-Methods': 'GET, POST',
+      'Access-Control-Allow-Origin': '*',
     },
   };
   // https://torre.co/api/suite/opportunities/$id
