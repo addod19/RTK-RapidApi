@@ -1,4 +1,4 @@
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
 import userReducer from './userReducer';
 import opportunityReducer from './opportunityReducer';
 import opportunitySearchReducer from './opportunitySearchReducer';
@@ -8,7 +8,7 @@ const rootReducer = combineReducers({
   userReducer,
   opportunityReducer,
   opportunitySearchReducer,
-  peopleSearchReducer
+  peopleSearchReducer,
 });
 
 export default rootReducer;

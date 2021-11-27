@@ -3,12 +3,12 @@ const initialState = {
 };
 
 const opportunityReducer = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'FETCH_USER_OPPORTUNITIES':
       return {
         ...state,
         opportunities: action.opportunities,
-      }
+      };
     default:
       return state;
   }

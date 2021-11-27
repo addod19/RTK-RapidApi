@@ -1,14 +1,14 @@
 const initialState = {
-  opportunities: [],
+  generalSearchUser: [],
 };
 
 const opportunitySearchReducer = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'FETCH_GENERAL_USER_OPPORTUNITIES':
       return {
         ...state,
-        opportunities: action.opportunities,
-      }
+        generalSearchUser: action.generalSearchUser,
+      };
     default:
       return state;
   }

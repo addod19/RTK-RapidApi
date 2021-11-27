@@ -3,12 +3,12 @@ const initialState = {
 };
 
 const userReducer = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'FETCH_USER':
       return {
         ...state,
         person: action.person,
-      }
+      };
     default:
       return state;
   }

@@ -3,24 +3,6 @@ import axios from 'axios';
 
 import '../assets/css/userList.css';
 
-// const fetchUser = async (username) => {
-//   const apiConfig = {
-//     headers: {
-//       'Content-Type': 'application/json',
-//       Accept: 'application/json',
-//       'Access-Control-Allow-Origin': '*',
-//     },
-//   };
-//   // https://torre.co/api/suite/opportunities/$id
-//   // https://torre.bio/api/bios/${username}
-//   try {
-//     const result = await axios.get(`https://torre.bio/api/bios/${username}`, apiConfig.headers);
-//     console.log(result.data);
-//   } catch (e) {
-//     console.log(e);
-//   }
-// };
-
 const UserList = () => {
   const [users, setUsers] = useState('');
   const [username, setUserName] = useState('addodaniellarbi');
@@ -28,9 +10,6 @@ const UserList = () => {
   let content = null;
 
   useEffect(async () => {
-    // fetchUser('addodaniellarbi').then((users) => {
-    //   setUsers(users || '');
-    // });
     const result = await axios.get(`https://torre.bio/api/bios/${username}`);
     console.log(result);
     setUsers(result.data);
@@ -43,11 +22,9 @@ const UserList = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(`submitted ${username}`);
-    // fetchUser();
   };
 
   if (users) {
-    // const [strengths] = users.person;
     content = (
       <div className="main-wrapper">
         <div className="user-profile">

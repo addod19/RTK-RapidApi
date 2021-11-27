@@ -1,19 +1,17 @@
-
-  
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Header from './Header';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './header';
 import UserList from '../container/userList';
-import Opportunities from '../containers/opportunities';
+import Opportunities from '../container/opportunities';
 
 const AppRouter = () => (
   <Router>
     <>
       <Header />
-      <Switch>
+      <Routes>
         <Route path="/" component={UserList} />
         <Route path="/opportunities/:id" component={Opportunities} />
-      </Switch>
+      </Routes>
     </>
   </Router>
 );

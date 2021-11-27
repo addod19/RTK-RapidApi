@@ -1,6 +1,6 @@
-const opportunitySearchActions = (general_search_user) => ({
+const opportunitySearchActions = (generalSearchUser) => ({
   type: 'FETCH_GENERAL_USER_OPPORTUNITIES',
-  general_search_user,
+  generalSearchUser,
 });
 
 export default opportunitySearchActions;

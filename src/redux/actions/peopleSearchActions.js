@@ -1,6 +1,6 @@
-const peopleSearchActions = (search_person) => ({
+const peopleSearchActions = (searchPerson) => ({
   type: 'FETCH_GENERAL_USER',
-  search_person,
+  searchPerson,
 });
 
 export default peopleSearchActions;
