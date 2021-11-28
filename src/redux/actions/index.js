@@ -1,7 +1,7 @@
 import userActions from './userActions';
 import peopleSearchActions from './peopleSearchActions';
-import opportunityActions from './userActions';
-import opportunitySearchActions from './peopleSearchActions';
+import opportunityActions from './opportunityActions';
+import opportunitySearchActions from './opportunitySearchActions';
 
 const rootActions = {
   userActions,
