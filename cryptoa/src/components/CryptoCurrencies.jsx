@@ -11,17 +11,20 @@ const CryptoCurrencies = ({ simplified }) => {
   const count = simplified ? 10 : 100;
   const { data: cryptosList, isFetching } = useGetCryptosQuery(count);
   const [cryptos, setCryptos] = useState();
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    setCryptos(cryptosList?.data?.coins);
-  });
+    const filteredData = cryptosList?.data?.coins.filter((coin) => coin.name.toLowerCase().includes(searchTerm));
+    
+    setCryptos(filteredData);
+  }, [cryptosList, searchTerm]);
 
   if (isFetching) return <Loader />;
-
+  console.log(searchTerm);
   return (
     <>
       {!simplified && (
-        <div className='="search-typo'>
+        <div className='="search-crypto'>
           <Input 
             placeholder="Search Cryptocurrency"
             onChange={(e) => setSearchTerm(e.target.value.toLowerCase())}
