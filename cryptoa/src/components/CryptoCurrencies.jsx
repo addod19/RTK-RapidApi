@@ -1,11 +1,63 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import millify from 'millify';
+import { Link } from 'react-router-dom';
+import { Card, Row, Col, Input } from 'antd';
 
-const CryptoCurrencies = () => {
+import { useGetCryptosQuery } from '../services/cryptoApi';
+import { Loader } from '../components';
+import PropTypes from 'prop-types';
+
+const CryptoCurrencies = ({ simplified }) => {
+  const count = simplified ? 10 : 100;
+  const { data: cryptosList, isFetching } = useGetCryptosQuery(count);
+  const [cryptos, setCryptos] = useState();
+
+  useEffect(() => {
+    setCryptos(cryptoList?.data?.coins);
+
+  });
+
+  if (isFetching) return <Loader />;
+
   return (
-    <div>
-      <h1>Crypto</h1>    
-    </div>
+    <>
+      {!simplified && (
+        <div className='="search-typo'>
+          <Input 
+            placeholder="Search Cryptocurrency"
+            onChange={(e) => setSearchTerm(e.target.value.toLowerCase())}
+          />
+        </div>
+      )}
+      <Row gutter={[32, 32]} className="cryptod-container">
+        {cryptos?.map((currency) => (
+          <Col
+            xs={24}
+            sm={12}
+            lg={6}
+            className="crypto-card"
+            key={currency.uuid}
+          >
+            <Link key={currency.uuid} to={`/crypto/${currency.uuid}`}>
+              <Card
+                title={`${currency.rank}. ${currency.name}`}
+                extra={<img className='crypto-image' src={currency.iconUrl} />}
+                hoverable
+              >
+                <p>Price: {millify(currency.price)}</p>
+                <p>,arket Cap: {millify(currency.marketCap)}</p>
+                <p>Daily change: {millify(currency.change)}%</p>
+              </Card>
+            </Link>
+          </Col>
+        ))} 
+      </Row>   
+    </>
   )
+}
+
+CryptoCurrencies.propTypes = {
+  simplified: PropTypes.bool,
 }
 
 export default CryptoCurrencies;
