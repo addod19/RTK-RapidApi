@@ -13,8 +13,7 @@ const CryptoCurrencies = ({ simplified }) => {
   const [cryptos, setCryptos] = useState();
 
   useEffect(() => {
-    setCryptos(cryptoList?.data?.coins);
-
+    setCryptos(cryptosList?.data?.coins);
   });
 
   if (isFetching) return <Loader />;
