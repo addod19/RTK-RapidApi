@@ -2,7 +2,7 @@ import React from 'react'
 
 const News = () => {
   return (
-    <div>
+    <div className="error">
       <h1>News</h1>    
     </div>
   )
