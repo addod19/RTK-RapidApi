@@ -42,7 +42,7 @@ const News = ( { simplified }) => {
             <a href={news.url} target="_blank" rel="noreferrer">
               <div className='news-image-container'>
                 <Title className='news-title' level={4}>{news.name}</Title>
-                <img src={news?.image?.thumbnail?.contentUrl || demoImage} alt="random" />
+                <img src={news?.image?.thumbnail?.contentUrl || demoImage} alt="random" className='img' />
               </div>
               <p>{news.description.length > 100 ? `${news.description.substring(0, 100)}...` : news.description}</p>
               <div className="provider-container">
