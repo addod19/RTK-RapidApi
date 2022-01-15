@@ -1,11 +1,8 @@
-# Torre Skills Test
+# Redux Toolkit Rapid API Manipulation
 
-> In this Milestone, I build a page to:
-    - List the skills of any given user
-    - When clicking on a paficular skill, you can
-        - show it's details related to that user
-        - show a list of related experiences from that user
-    
+> This project is inspired by Javascript Mastery. I watch the youtube tutorial and I thought this knowledge is valuable. It's such a great experience
+
+
  - Fix linter errors with the following commands
     - ``` npx stylelint "**/*.{css,scss}" ``` for stylelint
     - ``` npx eslint . ``` for eslint 
@@ -13,13 +10,14 @@
 
 ## Tools To Work With
 
-- Node.js
+- Redux Toolkit
 - React
-- React-DOM
-- React-Create-App
-- npm
-- React
-- Heroku
+- Ant Design
+- React-Router-Dom
+- HTML-React-Parser
+- Moment
+- Millify
+- Prop-Types
 
 ## Deployment
 
@@ -29,21 +27,21 @@
 
 ## Live Demo
 
-[Live Demo Link](https://calculator-20.herokuapp.com/)
+[Live Demo Link]()
 
 
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
-1. ``` git clone https://github.com/addod19/calculator.git ```
-2. ``` cd calculator ```
-3. ``` git checkout  start```
+1. ``` git clone https://github.com/addod19/RTK-RapidApi.git ```
+2. ``` cd RTK-RapidApi ```
+3. ``` git checkout -b crpto```
 4. ``` yarn i ```
 5. ``` yarn start ```
 
 ## Screenshot
-![screenshot](call.png)
+![screenshot]()
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -65,10 +63,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/addod19/calculator/issues).
+Feel free to check the [issues page](https://github.com/addod19/RTK-RapidApi/issues).
 
 
-1. Fork it (https://github.com/addod19/calculator/fork)
+1. Fork it (https://github.com/addod19/RTK-RapidApi/fork)
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
